@@ -13,15 +13,139 @@ html{
   *, *:before, *:after {
     box-sizing: inherit;
   }
-
-
+body{
+    font-family: var(--fuenteP);
+    overflow: scroll;
+    
+        
+}
+button{
+    padding: 10px 50px;
+    background-color: var(--amarilloViva);
+    border-radius: 20px;
+    border-color: var(--amarilloViva);
+    font-family: var(--fuenteP);
+    font-weight: 400;
+    font-size: 15px!important;
+}
 /*Menu*/
+
+/*banner principal*/
 .banner{
     width: 100%;
-    height: auto;
-    
+    height: 400px;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url("/paginaVivaAsesores/img/banner1-desk.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+@media (max-width: 900px) {
+    .banner{
+        background-image: url("/paginaVivaAsesores/img/banner1-mob.jpg");
+    }
+  
 }
 
+.bannerDesk{
+    width: 100%;
+}
+.copyBanner{
+    position: absolute;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 600px) {
+    .bannerMob{
+        display: none;
+    }
+    .copyBanner{
+        bottom: 40%;
+        left: 10%;
+    }
+}
+@media (max-width: 900px) {
+    .copyBanner{
+        bottom: 40%;
+        left: 10%;
+
+    }
+}
+@media (max-width: 600px) {
+  .bannerDesk{
+    display: none;
+  }
+  .bannerMob{
+    width: 100%;
+    height: auto;
+  }
+  .copyBanner{
+    top: 50%;
+    left: 10%;
+}
+}
+.barrita{
+    width: 100%;
+    height: 20px;
+    background-color: var(--amarilloViva);
+}
+
+/*cards*/
+.contenedor{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .contenedor{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+}
+.cardConatiner{
+    display: grid;
+    grid-template-columns: repeat((1, 1fr));
+    gap: 2rem;
+    padding-bottom: 10%;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.card{
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    background-color: rgba(245, 245, 245);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    margin: 10px;
+    
+}
+.card img{
+    width: 100%;
+}
+@media (min-width: 770px) {
+  .cardConatiner{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+  .card{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .card img{
+    width: 100%;
+    padding: 0;
+  }
+}
 
 
 /*Footer*/
